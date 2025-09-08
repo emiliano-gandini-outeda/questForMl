@@ -1,3 +1,5 @@
+import numpy as np
+
 inputs = [1, 2, 3, 2.5]
 
 wheigts = [[0.342, -0.876, 0.123, 0.567],
@@ -6,13 +8,6 @@ wheigts = [[0.342, -0.876, 0.123, 0.567],
 
 biases = [2, 3, 0.5]
 
-layer_output = []
-
-for neuron_wheigts, neuron_bias in zip(wheigts, biases):
-    neuron_output = 0
-    for temp_input, wheigt in zip(inputs, neuron_wheigts):
-        neuron_output += temp_input*wheigt
-    neuron_output += neuron_bias
-    layer_output.append(neuron_output)
+layer_output = np.dot(wheigts, inputs)
     
 print(layer_output)
