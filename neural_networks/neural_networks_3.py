@@ -17,5 +17,5 @@ layer2 = dense_layer(5, 2)
 layer1.forward(inputs)
 layer2.forward(layer1.output)
 
-print(layer1.output)
+print(layer1.output) 
 print(layer2.output)
