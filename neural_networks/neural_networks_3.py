@@ -13,9 +13,18 @@ class dense_layer:
 
 layer1 = dense_layer(4, 5)
 layer2 = dense_layer(5, 2)
+layer3 = dense_layer(5, 2)
+layer4 = dense_layer(5, 2)
+layer5 = dense_layer(5, 2)
+layer6 = dense_layer(5, 2)
+
 
 layer1.forward(inputs)
 layer2.forward(layer1.output)
+layer3.forward(layer2.output)
+layer4.forward(layer3.output)
+layer5.forward(layer4.output)
+layer6.forward(layer5.output)
 
 print(layer1.output) 
 print(layer2.output)
